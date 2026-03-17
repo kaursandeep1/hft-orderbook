@@ -14,7 +14,7 @@ When orders come in, they get added to the right list. The system always knows t
 # Does it actually work?
 Run it and see:
 
-``git clone https://github.com/kaursadneep1/orderbook-hft``
+``git clone https://github.com/kaursandeep1/hft-orderbook``
 
 ``cd orderbook-hft``
 
@@ -29,7 +29,10 @@ Run it and see:
 You'll watch orders get added, executed, cancelled – then a benchmark shows how fast it runs.
 
 # How fast?
+
 On my Mac:
+<img width="1470" height="956" alt="Screenshot 2026-03-17 at 6 36 46 PM" src="https://github.com/user-attachments/assets/8b42d207-4546-4452-a46b-154528a99651" />
+
 
 ``1 million orders → 33 milliseconds → ~30 million per second``
 

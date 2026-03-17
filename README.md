@@ -5,13 +5,13 @@ Just a simple order book I built while learning about trading systems. It matche
 # What's inside?
 The code keeps two lists:
 
-## Bids – people wanting to buy (highest price first)
+- Bids – people wanting to buy (highest price first)
 
-## Asks – people wanting to sell (lowest price first)
+- Asks – people wanting to sell (lowest price first)
 
 When orders come in, they get added to the right list. The system always knows the best price on each side instantly.
 
-#Does it actually work?
+# Does it actually work?
 Run it and see:
 
 ``git clone https://github.com/kaursadneep1/orderbook-hft
@@ -23,14 +23,15 @@ make
 
 You'll watch orders get added, executed, cancelled – then a benchmark shows how fast it runs.
 
-How fast?
+# How fast?
 On my Mac:
 
 ``1 million orders → 33 milliseconds → ~30 million per second``
 
 Fast enough for most things. Could probably make it faster with some tweaks.
 
-Want to improve it?
+# Want to improve it?
+
 Things I'm thinking about adding:
 
 Real matching engine (auto-execute when prices cross)

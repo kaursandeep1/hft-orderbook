@@ -34,7 +34,7 @@ On my Mac:
 <img width="1470" height="956" alt="Screenshot 2026-03-17 at 6 36 46 PM" src="https://github.com/user-attachments/assets/8b42d207-4546-4452-a46b-154528a99651" />
 
 
-``1 million orders → 33 milliseconds → ~30 million per second``
+``1 million orders → 29 milliseconds → ~34 million per second``
 
 Fast enough for most things. Could probably make it faster with some tweaks.
 

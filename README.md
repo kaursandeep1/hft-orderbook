@@ -1,35 +1,42 @@
 # HFT Order Book System
 
-A high-performance order book implementation demonstrating low-latency C++ techniques relevant to HFT systems.
+Just a simple order book I built while learning about trading systems. It matches buy and sell orders – the same thing that happens behind the scenes when you trade stocks.
 
-## Key Features
+# What's inside?
+The code keeps two lists:
 
-- **Low-Latency Design**: Atomic operations, cache-friendly data structures
-- **Lock-Free Reads**: Shared mutex for concurrent access
-- **Best Price Caching**: O(1) access to best bid/ask
-- **Network Programming**: UDP socket handling for market data
-- **Performance Monitoring**: Built-in latency measurement
+## Bids – people wanting to buy (highest price first)
 
-## Technical Highlights
+## Asks – people wanting to sell (lowest price first)
 
-- Modern C++17 with RAII principles
-- Thread-safe operations using std::shared_mutex
-- Memory ordering for atomics
-- Cache locality optimizations
-- Zero-copy parsing where possible
+When orders come in, they get added to the right list. The system always knows the best price on each side instantly.
 
-## Performance
+#Does it actually work?
+Run it and see:
 
-Benchmark results (on typical hardware):
-- 1M+ operations per second
-- Sub-microsecond latency for price queries
-- Efficient memory usage
+``git clone https://github.com/kaursadneep1/orderbook-hft
+cd orderbook-hft
+mkdir build && cd build
+cmake ..
+make
+./orderbook_demo``
 
-## How It Demonstrates HFT Skills
+You'll watch orders get added, executed, cancelled – then a benchmark shows how fast it runs.
 
-1. **C++ Expertise**: Templates, move semantics, RAII
-2. **Low-Latency**: Atomic operations, lock-free reads
-3. **Concurrency**: Thread-safe with minimal contention
-4. **Network Programming**: UDP socket handling
-5. **Performance Profiling**: Built-in metrics
-6. **System Design**: Clean separation of concerns
+How fast?
+On my Mac:
+
+``1 million orders → 33 milliseconds → ~30 million per second``
+
+Fast enough for most things. Could probably make it faster with some tweaks.
+
+Want to improve it?
+Things I'm thinking about adding:
+
+Real matching engine (auto-execute when prices cross)
+
+Connect to actual market data
+
+Try a lock-free version
+
+Add a simple web view to see the book move

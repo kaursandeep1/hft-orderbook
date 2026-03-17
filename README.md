@@ -14,12 +14,12 @@ When orders come in, they get added to the right list. The system always knows t
 # Does it actually work?
 Run it and see:
 
-``git clone https://github.com/kaursadneep1/orderbook-hft
-cd orderbook-hft
-mkdir build && cd build
-cmake ..
-make
-./orderbook_demo``
+``git clone https://github.com/kaursadneep1/orderbook-hft``
+``cd orderbook-hft``
+``mkdir build && cd build``
+``cmake ..``
+``make``
+``./orderbook_demo``
 
 You'll watch orders get added, executed, cancelled – then a benchmark shows how fast it runs.
 
